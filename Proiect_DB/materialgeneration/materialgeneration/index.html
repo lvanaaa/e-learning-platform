@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Cards with Edit and Link</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="addCardBtn" onclick="showPopup()">Add Card</button>
+    <div class="container">
+        <!-- Cards will be dynamically added here -->
+    </div>
+    
+
+    <!-- Add/Edit Modal -->
+    <!-- Modal for Card Creation -->
+    <div id="cardModal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle">Create Card</h2>
+            <form id="cardForm">
+                <label for="cardType">Card Type</label>
+                <select id="cardType" onchange="handleCardTypeChange()">
+                    <option value="pdf">PDF</option>
+                    <option value="newFile">New File</option>
+                </select>
+                <div id="pdfFields">
+                    <label for="pdfTitle">Title</label>
+                    <input type="text" id="pdfTitle">
+                    <label for="pdfFile">Upload PDF</label>
+                    <input type="file" id="pdfFile" accept=".pdf">
+                </div>
+                <div id="newFileFields">
+                    <label for="newFileTitle">Title</label>
+                    <input type="text" id="newFileTitle">
+                    <label for="newFileParagraph">Paragraph</label>
+                    <textarea id="newFileParagraph"></textarea>
+                    <label for="newFileDocument">Upload Document</label>
+                    <input type="file" id="newFileDocument">
+                </div>
+                <button type="button" onclick="saveCard()">Save Card</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- PDF Card Template -->
+    <template id="pdfCardTemplate">
+        <div class="card">
+            <h3 class="card-title"></h3>
+            <button class="edit-btn">Edit</button>
+        </div>
+    </template>
+
+    <!-- New File Card Template -->
+    <template id="newFileCardTemplate">
+        <div class="card">
+            <h3 class="card-title"></h3>
+            <p class="card-paragraph hidden"></p>
+            <button class="edit-btn">Edit</button>
+        </div>
+    </template>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+:root{
+    --color-white:#fff;
+    --color-light:#f3f4f8;
+    --color-dark:#686e7a;
+    --color-black:#111727;
+    --color-primary: #f75842;
+    --color-body-bg:#2e3267;
+    --transition: all 400ms ease;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border:0;
+    text-decoration: none;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: var(--color-body-bg);
+    color: var(--color-dark);
+    font-size: 0.9rem;
+    display: grid;
+    place-items: center;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+}
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+h1{
+    color:var(--color-black);
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+a, a:active, a:visited{
+    color: var(--color-body-bg);
+    font-weight: 500;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:0.7rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+
+}
+.btn.primary{
+    background: var(--color-primary);
+    color: var(--color-white);
+    width: 100%;
+}
+.btn:hover{
+    background: var(--color-body-bg);
+    color:var(--color-white);
+}
+.sign-in{
+    background: var(--color-white);
+    width: 60rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.sign-in_details{
+    padding: 2rem 4rem;
+}
+.sign-in_form{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    margin-top: 3rem;
+}
+.form_control{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+input:not([type="checkbox"]){
+    width: 100%;
+    border:1px solid var(--color-body-bg);
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+}
+input::placeholder{
+    color: var(--color-body-bg);
+}
+label{
+    font-weight: 500;
+    color: var(--color-black);
+}
+.sign-in_extras{
+    display: flex;
+    justify-content: space-between;
+}
+.sign-in_extras div{
+    display: flex;
+    gap:0.5rem;
+    align-items: center;
+}
+.next_page{
+    margin-top: 0.85rem;
+    text-align: center;
+    display: block;
+}
+.sign-in_logo{
+    display: grid;
+    place-content: center;
+    background: var(--color-light);
+    height: 100%;
+}
+select{
+    font-weight: 500;
+    color: var(--color-black);
+    width: 100%;
+    border:1px solid var(--color-body-bg);
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    
+}

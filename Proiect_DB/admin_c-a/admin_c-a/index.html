@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Add New Card Button -->
+        <button id="addCardBtn">Add New Card</button>
+
+        <!-- Form for creating a new card -->
+        <div id="cardForm" class="card-form">
+            <h2>Select Card Type</h2>
+            <select id="cardType">
+                <option value="pdf">Card for PDF</option>
+                <option value="newFile">Card for New File</option>
+            </select>
+            <button id="createCardBtn">Create Card</button>
+            <button id="cancelCardBtn">Cancel</button>
+        </div>
+
+        <!-- Container for dynamically created cards -->
+        <div id="cardsContainer" class="cards-container"></div>
+    </div>
+
+    <!-- Template for PDF Card -->
+    <template id="pdfCardTemplate">
+        <div class="card">
+            <h3>Open PDF Card</h3>
+            <input type="text" class="cardTitle" placeholder="Enter Card Title">
+            <input type="file" class="pdfUpload" accept=".pdf">
+            <div class="actions">
+                <button class="saveCardBtn">Save Card</button>
+                <button class="editCardBtn">Edit Card</button>
+                <button class="deleteCardBtn">Delete Card</button>
+            </div>
+        </div>
+    </template>
+
+    <!-- Template for New File Card -->
+    <template id="newFileCardTemplate">
+        <div class="card">
+            <h3>Open New File Card</h3>
+            <input type="text" class="cardTitle" placeholder="Enter Card Title">
+            <textarea placeholder="Edit text for the card"></textarea>
+            <input type="file" class="newFileUpload">
+            <div class="actions">
+                <button class="saveCardBtn">Save Card</button>
+                <button class="editCardBtn">Edit Card</button>
+                <button class="deleteCardBtn">Delete Card</button>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>

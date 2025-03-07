@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+    <style>
+        body{ background-image: url("/images/bg-texture.png")}
+    </style>
+</head>
+<body>
+    <section class="sign-in">
+        <article class="sign-in_details">
+            <h1>Sign In</h1>
+            <p>Log in to your account</p>
+            <form class="sign-in_form" action="home.html" method="GET">
+                <div class="form_control">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form_control">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+                <div class="sign-in_extras">
+                    <div>
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="">Forgot password?</a>
+                </div>
+                <button class="btn primary" type="submit">Sign in</button>
+            </form>
+            <small class="next_page">Don't have an account?<a href="signup.html"> Sign up</a></small>
+        </article>
+        <article class="sign-in_logo">
+            <div>
+                <img src="images/header.svg">
+            </div>
+        </article>
+    </section>
+</body>
+</html>

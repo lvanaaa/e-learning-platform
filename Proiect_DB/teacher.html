@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+    <style>
+        body{ background-image: url("/images/bg-texture.png")}
+    </style>
+</head>
+<body>
+    <section class="sign-in">
+        <article class="sign-in_details">
+            <h1>Sign In</h1>
+            <p>Fill the form below to create your account</p>
+            <form class="sign-in_form" action="index.html" method="GET">
+                <div class="form_control">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" placeholder="Enter your full name">
+                </div>
+                <div class="form_control">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form_control">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+                <div class="form_control">
+                    <label for="cpassword"> Confirm Password</label>
+                    <input type="password" id="cpassword" placeholder="Confirm your password">
+                </div>
+                <div class="form_control">
+                    <label for="subject"> Subject you are teaching</label>
+                    <select id="subject" name="subject" size="1">
+                        <option value="null">...</option>
+                        <option value="Programming">Computer Science</option>
+                        <option value="Programming">Data Science</option>
+                        <option value="Programming">Web Development</option>
+                        <option value="Programming">Creative Writing</option>
+                        <option value="Programming">Photography Basics</option>
+                        <option value="Programming">Science</option>
+                    </select>
+                </div>
+                <button class="btn primary" type="submit">Sign up</button>
+            </form>
+            <small class="next_page"><a href="signup.html">I am a student</a></small>
+        
+        </article>
+        <article class="sign-in_logo">
+            <div>
+                <img src="images/header.svg">
+            </div>
+        </article>
+    </section>
+</body>
+</html>

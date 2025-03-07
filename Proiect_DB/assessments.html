@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="css/assessments.css">
+    <style>
+        .courses{
+            margin-top: 1rem;
+        }
+    </style>
+    <style>
+        body{ background-image: url("/images/bg-texture.png")}
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="container nav_container">
+            <a href="index.html"><h4>PedaONLINE</h4></a>
+            <ul class="nav_menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="subscriptions.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="login.html">Account</a></li>
+            </ul>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+        </div>
+    </nav>
+
+    <!-- Section pentru carduri -->
+    <section class="courses">
+        <div class="container courses_container">
+            <article class="course">
+                <div class="course_info">
+                    <p>Add courses by pressing "+" button</p>
+                    <a href="#" onclick="showPopup()" class="btn btn-primary"><i class="uil uil-plus"></i></a>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- Secțiunea în care vor fi afișate cardurile create -->
+<section class="courses">
+    <div class="container courses_container" id="coursesList">
+        <!-- Cardurile vor fi adăugate aici dinamic prin JavaScript -->
+    </div>
+</section>
+
+<!-- Modal pentru crearea sau editarea cardurilor -->
+<section class="courses">
+    <div id="cardModal" class="container courses_container" style="display: none;">
+        <article class="course">
+            <h3>Create/Edit Card</h3>
+            <form id="cardForm">
+                <label for="cardType">Card Type</label>
+                <select id="cardType" onchange="handleCardTypeChange()">
+                    <option value="pdf">PDF</option>
+                    <option value="newFile">New File</option>
+                </select>
+                <div id="pdfFields">
+                    <label for="pdfTitle">Title</label>
+                    <input type="text" id="pdfTitle">
+                    <label for="pdfFile">Upload PDF</label>
+                    <input type="file" id="pdfFile" accept=".pdf">
+                </div>
+                <div id="newFileFields">
+                    <label for="newFileTitle">Title</label>
+                    <input type="text" id="newFileTitle">
+                    <label for="newFileParagraph">Paragraph</label>
+                    <textarea id="newFileParagraph"></textarea>
+                    <label for="newFileDocument">Upload Document</label>
+                    <input type="file" id="newFileDocument">
+                </div>
+                <button class="btn btn-primary" type="button" onclick="saveCard()">Save Card</button>
+            </form>
+        </article>
+    </div>
+</section>
+
+
+    <!-- Templates pentru carduri -->
+    <template id="pdfCardTemplate">
+        <article class="course">
+            <div class="course_info">
+                <h3 class="course_info"></h3>
+                <button class="btn btn-primary edit-btn">Edit</button>
+            </div>
+        </article>
+    </template>
+    <template id="newFileCardTemplate">
+        <article class="course">
+            <div class="course_info">
+                <h3 class="course_info"></h3>
+                <p class="card-paragraph hidden"></p>
+                <button class="btn btn-primary edit-btn">Edit</button>
+            </div>
+        </article>
+    </template>
+
+    <footer>
+        <div class="container footer_container">
+            <div class="footer_1">
+                <a href="index.html" class="footer_logo"><h4>PedaONLINE</h4></a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quibusdam magnam architecto.</p>
+            </div>
+            <div class="footer_2">
+                <h4>Permalinks</h4>
+                <ul class="permalinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="subscriptions.html">About</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="index.html">Account</a></li>
+                </ul>
+            </div>
+            <div class="footer_3">
+                <h4>Privacy</h4>
+                <ul class="privacy">
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms and conditions</a></li>
+                    <li><a href="">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer_4">
+                <h4>Contact Us</h4>
+                <div>
+                    <p>0773376359</p>
+                    <p>luanamilitaru.lulu@gmail.com</p>
+                </div>
+                <ul class="footer_socials">
+                    <li><a href=""><i class="uil uil-facebook-f"></i></a></li>
+                    <li><a href=""><i class="uil uil-instagram-alt"></i></a></li>
+                    <li><a href=""><i class="uil uil-linkedin-alt"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_copyright">
+            <small>Copyright &copy;PedaONLINE</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main/assessment.js"></script>
+
+</body>
+</html>

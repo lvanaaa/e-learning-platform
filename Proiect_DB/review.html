@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/review.css">
+
+
+    <style>
+        body{ background-image: url("/images/bg-texture.png")}
+    </style>
+</head>
+<body>
+
+    <!-- aici e simplu de comentat, navbar -->
+    <nav>
+        <div class="container nav_container">
+            <a href="index.html"><h4>PedaONLINE</h4></a>
+            <ul class="nav_menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="subscriptions.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="login.html">Log In</a></li>
+            </ul>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+        </div>
+    </nav>
+    <section class="wrapper">
+		<h3>Leave a review</h3>
+		<form action="index.html" method="GET">
+			<div class="rating">
+				<input type="number" name="rating" hidden>
+				<i class='bx bx-star star' style="--i: 0;"></i>
+				<i class='bx bx-star star' style="--i: 1;"></i>
+				<i class='bx bx-star star' style="--i: 2;"></i>
+				<i class='bx bx-star star' style="--i: 3;"></i>
+				<i class='bx bx-star star' style="--i: 4;"></i>
+			</div>
+			<textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+			<div class="btn-group">
+				<button type="submit" class="btn submit">Submit</button>
+				<button class="btn cancel">Cancel</button>
+			</div>
+		</form>
+	</section>
+    <footer>
+        <div class="container footer_container">
+            <div class="footer_1">
+                <a href="index.html" class="footer_logo"><h4>PedaONLINE</h4></a>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quibusdam magnam architecto.
+                </p>
+            </div>
+            <div class="footer_2">
+                <h4>Permalinks</h4>
+                <ul class="permalinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="subscriptions.html">About</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="login.html">Account</a></li>
+                </ul>
+            </div>
+
+             <div class="footer_3">
+                <h4>Privacy</h4>
+                <ul class="privacy">
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms and conditions</a></li>
+                    <li><a href="">Refund Policy</a></li>
+                </ul>
+             </div>
+             <div class="footer_4">
+                <h4>Contact Us</h4>
+                <div>
+                    <p>0773376359</p>
+                    <p>luanamilitaru.lulu@gmail.com</p>
+                </div>
+
+                <ul class="footer_socials">
+                    <li>
+                        <a href=""><i class="uil uil-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="uil uil-instagram-alt"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="uil uil-linkedin-alt"></i></a>
+                    </li>
+                </ul>
+             </div>
+        </div>
+        <div class="footer_copyright">
+            <small>Copyright &copy;PedaONLINE</small>
+         </div>
+     </footer>
+
+
+
+
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main/main.js"></script>
+    <script>
+        var swiper=new Swiper(".mySwiper",{
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination:{
+                el:".swiper-pagination",clickable:true,
+            },
+            breakpoints:{
+                600:{
+                    slidesPerView: 2
+                }
+            }
+        });
+    </script>
+    
+</body>
+</html>
